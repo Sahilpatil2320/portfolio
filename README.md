@@ -88,7 +88,3 @@ npm run build
 - **GitHub:** [github.com/Sahilpatil2320](https://github.com/Sahilpatil2320)
 - **LeetCode:** [leetcode.com/u/Sahilpatil2320](https://leetcode.com/u/Sahilpatil2320/)
 - **Location:** Kolhapur, Maharashtra, India
-
----
-
-⭐ *If you find this portfolio helpful or inspiring, feel free to give it a star!*
