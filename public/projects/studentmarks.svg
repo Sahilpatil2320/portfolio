@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="smBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1826"/>
+      <stop offset="50%" stop-color="#0f263d"/>
+      <stop offset="100%" stop-color="#07121c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#smBg)"/>
+
+  <!-- Top bar -->
+  <rect x="25" y="25" width="290" height="38" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.3)"/>
+  <text x="40" y="49" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#38bdf8">Student Marks Analyzer // PHP &amp; MySQL</text>
+
+  <!-- Interactive Dashboard UI Mockup -->
+  <g transform="translate(60, 95)">
+    <!-- Container -->
+    <rect width="680" height="315" rx="12" fill="#0d1f30" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1.5"/>
+
+    <!-- Left Stats: Student Records Table -->
+    <g transform="translate(20, 20)">
+      <text x="0" y="16" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Ranked Student Records</text>
+      <rect x="0" y="28" width="370" height="240" rx="8" fill="#07121d" stroke="rgba(148, 163, 184, 0.15)"/>
+
+      <!-- Table Header -->
+      <rect x="0" y="28" width="370" height="32" rx="8" fill="#0e2236"/>
+      <text x="15" y="49" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">ROLL</text>
+      <text x="75" y="49" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">NAME</text>
+      <text x="195" y="49" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">TOTAL</text>
+      <text x="260" y="49" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">PERC%</text>
+      <text x="325" y="49" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">GRD</text>
+
+      <!-- Row 1 -->
+      <text x="15" y="86" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">#101</text>
+      <text x="75" y="86" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Sahil P.</text>
+      <text x="195" y="86" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">285/300</text>
+      <text x="260" y="86" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#86efac">95.0%</text>
+      <text x="325" y="86" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">A+</text>
+      <line x1="10" y1="98" x2="360" y2="98" stroke="rgba(148, 163, 184, 0.08)"/>
+
+      <!-- Row 2 -->
+      <text x="15" y="125" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">#102</text>
+      <text x="75" y="125" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Aman S.</text>
+      <text x="195" y="125" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">264/300</text>
+      <text x="260" y="125" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#86efac">88.0%</text>
+      <text x="325" y="125" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">A</text>
+      <line x1="10" y1="137" x2="360" y2="137" stroke="rgba(148, 163, 184, 0.08)"/>
+
+      <!-- Row 3 -->
+      <text x="15" y="164" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">#103</text>
+      <text x="75" y="164" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Rohan K.</text>
+      <text x="195" y="164" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">243/300</text>
+      <text x="260" y="164" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#93c5fd">81.0%</text>
+      <text x="325" y="164" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#60a5fa">B+</text>
+      <line x1="10" y1="176" x2="360" y2="176" stroke="rgba(148, 163, 184, 0.08)"/>
+
+      <!-- Row 4 -->
+      <text x="15" y="203" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">#104</text>
+      <text x="75" y="203" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Pooja M.</text>
+      <text x="195" y="203" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">228/300</text>
+      <text x="260" y="203" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#93c5fd">76.0%</text>
+      <text x="325" y="203" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#60a5fa">B</text>
+
+      <!-- Action badge -->
+      <rect x="15" y="224" width="105" height="24" rx="4" fill="#0284c7"/>
+      <text x="67" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#ffffff">+ Add Student</text>
+    </g>
+
+    <!-- Right Chart.js Visualizations -->
+    <g transform="translate(415, 20)">
+      <text x="0" y="16" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Chart.js Analytics</text>
+      <rect x="0" y="28" width="245" height="240" rx="8" fill="#07121d" stroke="rgba(148, 163, 184, 0.15)"/>
+
+      <!-- Subject Average Bar Chart -->
+      <text x="15" y="52" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">Subject Averages (%)</text>
+      
+      <!-- Bar 1 -->
+      <rect x="25" y="70" width="32" height="100" rx="4" fill="#38bdf8"/>
+      <text x="41" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#cbd5e1">Sub1</text>
+      <text x="41" y="62" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#38bdf8">86%</text>
+
+      <!-- Bar 2 -->
+      <rect x="85" y="90" width="32" height="80" rx="4" fill="#60a5fa"/>
+      <text x="101" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#cbd5e1">Sub2</text>
+      <text x="101" y="82" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#60a5fa">74%</text>
+
+      <!-- Bar 3 -->
+      <rect x="145" y="60" width="32" height="110" rx="4" fill="#34d399"/>
+      <text x="161" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#cbd5e1">Sub3</text>
+      <text x="161" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#34d399">92%</text>
+
+      <!-- Pass/Fail Badge -->
+      <rect x="20" y="210" width="205" height="38" rx="6" fill="#0e2236" stroke="rgba(56, 189, 248, 0.2)"/>
+      <circle cx="35" cy="229" r="6" fill="#22c55e"/>
+      <text x="50" y="233" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">Pass Rate: <tspan fill="#86efac" font-weight="700">94.2%</tspan></text>
+    </g>
+  </g>
+</svg>

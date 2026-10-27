@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="50%" stop-color="#0f2942"/>
+      <stop offset="100%" stop-color="#07111e"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="rgba(56, 189, 248, 0.08)" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="500" y1="0" x2="500" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+  </g>
+
+  <!-- Glowing Connection Nodes -->
+  <circle cx="400" cy="225" r="90" fill="none" stroke="rgba(56, 189, 248, 0.15)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <circle cx="400" cy="225" r="140" fill="none" stroke="rgba(168, 85, 247, 0.12)" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+  <!-- Center Hub -->
+  <circle cx="400" cy="225" r="48" fill="#0f172a" stroke="url(#cyanGrad)" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="400" y="220" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#38bdf8">AI ENGINE</text>
+  <text x="400" y="238" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Top-5 Match</text>
+
+  <!-- Node 1: Startup -->
+  <g transform="translate(230, 130)">
+    <line x1="0" y1="0" x2="170" y2="95" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="34" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="0" y="-3" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#f8fafc">Startup</text>
+    <text x="0" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38bdf8">Profile Vector</text>
+  </g>
+
+  <!-- Node 2: Investor -->
+  <g transform="translate(570, 130)">
+    <line x1="0" y1="0" x2="-170" y2="95" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="34" fill="#0f172a" stroke="#a855f7" stroke-width="2"/>
+    <text x="0" y="-3" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#f8fafc">Investor</text>
+    <text x="0" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a855f7">TF-IDF Criteria</text>
+  </g>
+
+  <!-- Node 3: Mentor -->
+  <g transform="translate(250, 320)">
+    <line x1="0" y1="0" x2="150" y2="-95" stroke="rgba(52, 211, 153, 0.4)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="34" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+    <text x="0" y="-3" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#f8fafc">Mentor</text>
+    <text x="0" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#34d399">Domain Fit</text>
+  </g>
+
+  <!-- Node 4: Opportunity -->
+  <g transform="translate(550, 320)">
+    <line x1="0" y1="0" x2="-150" y2="-95" stroke="rgba(251, 191, 36, 0.4)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="34" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+    <text x="0" y="-3" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#f8fafc">Student</text>
+    <text x="0" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#fbbf24">Cosine Sim</text>
+  </g>
+
+  <!-- Header Overlay -->
+  <rect x="25" y="25" width="220" height="38" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.25)"/>
+  <text x="40" y="49" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#38bdf8">StartupSync // ML Core</text>
+
+  <!-- Similarity badge -->
+  <rect x="560" y="25" width="215" height="38" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(168, 85, 247, 0.25)"/>
+  <text x="575" y="49" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="500" fill="#e2e8f0">Cosine Sim: 0.942 Top-5</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1520"/>
+      <stop offset="50%" stop-color="#0c202d"/>
+      <stop offset="100%" stop-color="#061017"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#pbBg)"/>
+
+  <!-- Top bar -->
+  <rect x="25" y="25" width="240" height="38" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(6, 182, 212, 0.3)"/>
+  <text x="40" y="49" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#22d3ee">Prompt Builder // Flask</text>
+
+  <!-- Interactive Builder UI Mockup -->
+  <g transform="translate(60, 95)">
+    <!-- Container -->
+    <rect width="680" height="315" rx="12" fill="#0b1722" stroke="rgba(148, 163, 184, 0.18)" stroke-width="1.5"/>
+
+    <!-- Left Controls Panel -->
+    <rect x="0" y="0" width="260" height="315" rx="12" fill="#081018" stroke="rgba(148, 163, 184, 0.12)"/>
+    <text x="24" y="38" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Prompt Parameters</text>
+
+    <!-- Field 1 -->
+    <text x="24" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Target AI Persona:</text>
+    <rect x="24" y="84" width="212" height="32" rx="6" fill="#0f1d2b" stroke="rgba(6, 182, 212, 0.3)"/>
+    <text x="36" y="105" font-family="'JetBrains Mono', monospace" font-size="11" fill="#e2e8f0">Senior Java Architect</text>
+
+    <!-- Field 2 -->
+    <text x="24" y="138" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Task Objective:</text>
+    <rect x="24" y="148" width="212" height="32" rx="6" fill="#0f1d2b" stroke="rgba(148, 163, 184, 0.15)"/>
+    <text x="36" y="169" font-family="'JetBrains Mono', monospace" font-size="11" fill="#e2e8f0">REST API Architecture</text>
+
+    <!-- Field 3 -->
+    <text x="24" y="202" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">Constraints:</text>
+    <rect x="24" y="212" width="212" height="32" rx="6" fill="#0f1d2b" stroke="rgba(148, 163, 184, 0.15)"/>
+    <text x="36" y="233" font-family="'JetBrains Mono', monospace" font-size="11" fill="#e2e8f0">Clean Architecture, OOP</text>
+
+    <rect x="24" y="260" width="212" height="36" rx="8" fill="#0891b2"/>
+    <text x="130" y="283" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#ffffff">Generate Prompt</text>
+
+    <!-- Right Live Preview Panel -->
+    <g transform="translate(280, 0)">
+      <text x="24" y="38" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Live Prompt Output</text>
+      <rect x="24" y="55" width="350" height="235" rx="8" fill="#060c13" stroke="rgba(6, 182, 212, 0.25)"/>
+
+      <text x="40" y="85" font-family="'JetBrains Mono', monospace" font-size="11" fill="#22d3ee"># SYSTEM DIRECTIVE</text>
+      <text x="40" y="110" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">You are a Senior Java Architect.</text>
+      <text x="40" y="135" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">Design a production-grade REST API</text>
+      <text x="40" y="155" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">adhering to clean architecture and OOP.</text>
+      <text x="40" y="185" font-family="'JetBrains Mono', monospace" font-size="11" fill="#22d3ee"># CONSTRAINTS &amp; FORMAT</text>
+      <text x="40" y="210" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">- Provide clean class diagrams</text>
+      <text x="40" y="230" font-family="'JetBrains Mono', monospace" font-size="10" fill="#cbd5e1">- Specify HTTP response codes &amp; DTOs</text>
+
+      <rect x="260" y="248" width="100" height="28" rx="6" fill="rgba(34, 197, 94, 0.15)" stroke="rgba(34, 197, 94, 0.3)"/>
+      <text x="310" y="266" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#86efac">✓ Copied</text>
+    </g>
+  </g>
+</svg>
