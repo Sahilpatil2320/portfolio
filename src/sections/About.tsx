@@ -16,6 +16,37 @@ interface AboutProps {
   onOpenResumeModal?: () => void;
 }
 
+const HIGHLIGHT_CARDS = [
+  {
+    title: "Core Java & OOP",
+    desc: "Strong foundation in Java programming, object-oriented concepts, and clean software architecture.",
+    pillar: "Pillar 01",
+    tags: ["Core Java", "OOP Design", "Architecture"],
+    icon: Code2
+  },
+  {
+    title: "Full-Stack Development",
+    desc: "Building dynamic web interfaces and backend services with React.js, Node.js, Express, and REST APIs.",
+    pillar: "Pillar 02",
+    tags: ["React.js", "Node.js", "Express", "REST APIs"],
+    icon: Layers
+  },
+  {
+    title: "700+ DSA Problems",
+    desc: "Solved 200+ problems on LeetCode with 100 Days Badge and 500+ problems on CodeChef.",
+    pillar: "Pillar 03",
+    tags: ["LeetCode 200+", "100D Badge", "CodeChef 500+"],
+    icon: Terminal
+  },
+  {
+    title: "AI & Smart Algorithms",
+    desc: "Developed recommendation engine utilizing Python, TF-IDF vectorization, and Cosine Similarity.",
+    pillar: "Pillar 04",
+    tags: ["Python", "TF-IDF", "Cosine Similarity"],
+    icon: Cpu
+  }
+];
+
 export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
   return (
     <section 
@@ -34,30 +65,26 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
           description="A genuine look into my background, engineering education, and technical problem-solving focus."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch text-left">
           
-          {/* Left Column: Authentic Biography & Story (Spans 6 cols) */}
-          <div className="lg:col-span-6 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/30 p-7 sm:p-9 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.6)] transition-all duration-300">
-            <div className="space-y-6">
+          {/* Left Column: Compact Authentic Biography (Spans 5 cols on lg) */}
+          <div className="lg:col-span-5 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/30 p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.6)] transition-all duration-300">
+            <div className="space-y-4">
               
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181818] border border-[#D8B45A]/25 text-xs font-mono text-[#D8B45A]">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Computer Science &amp; Engineering</span>
               </div>
 
-              {/* Exact Text from User Request */}
-              <div className="space-y-4 text-sm sm:text-base text-[#F5F2EB] leading-relaxed font-sans">
-                <p className="border-l-2 border-[#D8B45A] pl-4 text-[#F5F2EB] font-medium leading-relaxed bg-[#141414]/50 py-1.5 rounded-r-xl">
+              {/* Exact Quote from Third Image */}
+              <div className="text-sm sm:text-base text-[#F5F2EB] leading-relaxed font-sans">
+                <p className="border-l-2 border-[#D8B45A] pl-4 text-[#F5F2EB] font-medium leading-relaxed bg-[#141414]/60 py-2.5 rounded-r-xl">
                   "{PROFILE.introStory}"
-                </p>
-
-                <p className="text-[#A7A29A] leading-relaxed">
-                  {PROFILE.aboutStory}
                 </p>
               </div>
 
-              {/* Education Summary Card */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-[#141414] border border-[#222222] space-y-2">
+              {/* Education Summary Card from Fourth Image */}
+              <div className="p-4 rounded-2xl bg-[#141414] border border-[#222222] space-y-1.5">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs font-mono text-[#D8B45A]">
                     <GraduationCap className="w-4 h-4" />
@@ -67,7 +94,7 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
                     CGPA: 8.02
                   </span>
                 </div>
-                <h4 className="text-sm sm:text-base font-bold text-[#F5F2EB]">
+                <h4 className="text-sm font-bold text-[#F5F2EB]">
                   D. Y. Patil College of Engineering and Technology, Kolhapur
                 </h4>
                 <p className="text-xs font-mono text-[#A7A29A]">
@@ -77,8 +104,8 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
 
             </div>
 
-            {/* Bottom Actions: Resume Download Button */}
-            <div className="pt-6 mt-6 border-t border-[#1C1C1C] flex flex-wrap items-center gap-3">
+            {/* Bottom Actions: Resume Download & Contact */}
+            <div className="pt-5 mt-5 border-t border-[#1C1C1C] flex flex-wrap items-center gap-3">
               <button
                 type="button"
                 onClick={onOpenResumeModal}
@@ -98,36 +125,46 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
             </div>
           </div>
 
-          {/* Right Column: 4 Editorial Pillar Cards (Spans 6 cols) */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-            {PROFILE.highlights.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/40 hover:-translate-y-1 active:scale-[0.99] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_30px_rgba(216,180,90,0.1)] flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="p-3 w-fit rounded-2xl bg-[#161616] border border-[#2A2A2A] group-hover:border-[#D8B45A]/50 text-[#D8B45A] mb-4 transition-colors">
-                    {idx === 0 && <Code2 className="w-5 h-5" />}
-                    {idx === 1 && <Layers className="w-5 h-5" />}
-                    {idx === 2 && <Terminal className="w-5 h-5" />}
-                    {idx === 3 && <Cpu className="w-5 h-5" />}
+          {/* Right Column: 4 Balanced Cards Proportional with Left Side (Spans 7 cols on lg) */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {HIGHLIGHT_CARDS.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-5 sm:p-5 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/40 hover:-translate-y-1 active:scale-[0.99] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_30px_rgba(216,180,90,0.1)] flex flex-col justify-between group"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="p-2.5 w-fit rounded-2xl bg-[#161616] border border-[#2A2A2A] group-hover:border-[#D8B45A]/50 text-[#D8B45A] transition-colors">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <span className="text-[11px] font-mono text-[#736F67]">{item.pillar}</span>
+                    </div>
+
+                    <h3 className="text-sm sm:text-base font-bold text-[#F5F2EB] mb-1.5 group-hover:text-[#D8B45A] transition-colors font-display">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-xs text-[#A7A29A] leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#F5F2EB] mb-2 group-hover:text-[#D8B45A] transition-colors font-display">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-[#A7A29A] leading-relaxed">
-                    {item.desc}
-                  </p>
+                  {/* Key Tech Tag Pills Eliminating Empty Space */}
+                  <div className="pt-3 mt-3 border-t border-[#1C1C1C] flex flex-wrap gap-1.5">
+                    {item.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="px-2 py-0.5 rounded-md bg-[#161616] border border-[#262626] text-[10px] sm:text-[11px] font-mono text-[#D8B45A]/90 font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-
-                <div className="pt-4 mt-4 border-t border-[#1C1C1C] flex items-center justify-between text-[11px] font-mono text-[#736F67]">
-                  <span>Pillar 0{idx + 1}</span>
-                  <span className="text-[#D8B45A]/70">Verified Skill</span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
         </div>

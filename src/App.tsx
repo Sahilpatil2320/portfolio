@@ -11,7 +11,6 @@ import { Contact } from './sections/Contact';
 import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
 import { BackToTop } from './components/BackToTop';
-import { CustomCursor } from './components/CustomCursor';
 import { Toast } from './components/Toast';
 import type { ToastMessage } from './components/Toast';
 
@@ -35,9 +34,6 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#080808] text-[#F5F2EB] flex flex-col font-sans selection:bg-[#D8B45A] selection:text-[#080808] relative">
-      {/* Custom Champagne Gold Cursor */}
-      <CustomCursor />
-
       {/* Navigation */}
       <Navbar onOpenResumeModal={() => setIsResumeModalOpen(true)} />
 
