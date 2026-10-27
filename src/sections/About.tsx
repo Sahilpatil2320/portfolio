@@ -1,6 +1,7 @@
 import React from 'react';
 import { PROFILE } from '../data/profile';
 import { SectionHeading } from '../components/SectionHeading';
+import { Reveal } from '../components/Reveal';
 import { 
   Code2, 
   Layers, 
@@ -68,7 +69,9 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch text-left">
           
           {/* Left Column: Compact Authentic Biography (Spans 5 cols on lg) */}
-          <div className="lg:col-span-5 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/30 p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.6)] transition-all duration-300">
+          <div className="lg:col-span-5 flex flex-col">
+            <Reveal direction="up" distance={30} duration={0.65} delay={0.1} className="h-full flex flex-col">
+              <div className="rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/30 p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgba(0,0,0,0.6)] transition-all duration-300 h-full">
             <div className="space-y-4">
               
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181818] border border-[#D8B45A]/25 text-xs font-mono text-[#D8B45A]">
@@ -123,6 +126,8 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
+              </div>
+            </Reveal>
           </div>
 
           {/* Right Column: 4 Balanced Cards Proportional with Left Side (Spans 7 cols on lg) */}
@@ -130,39 +135,45 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
             {HIGHLIGHT_CARDS.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div
+                <Reveal
                   key={idx}
-                  className="p-5 sm:p-5 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/40 hover:-translate-y-1 active:scale-[0.99] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_30px_rgba(216,180,90,0.1)] flex flex-col justify-between group"
+                  direction="up"
+                  distance={28}
+                  duration={0.6}
+                  delay={0.15 + idx * 0.08}
+                  className="h-full flex flex-col"
                 >
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="p-2.5 w-fit rounded-2xl bg-[#161616] border border-[#2A2A2A] group-hover:border-[#D8B45A]/50 text-[#D8B45A] transition-colors">
-                        <Icon className="w-4 h-4" />
+                  <div className="p-5 sm:p-5 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/40 hover:-translate-y-1 active:scale-[0.99] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_30px_rgba(216,180,90,0.1)] flex flex-col justify-between group h-full">
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="p-2.5 w-fit rounded-2xl bg-[#161616] border border-[#2A2A2A] group-hover:border-[#D8B45A]/50 text-[#D8B45A] transition-colors">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        <span className="text-[11px] font-mono text-[#736F67]">{item.pillar}</span>
                       </div>
-                      <span className="text-[11px] font-mono text-[#736F67]">{item.pillar}</span>
+
+                      <h3 className="text-sm sm:text-base font-bold text-[#F5F2EB] mb-1.5 group-hover:text-[#D8B45A] transition-colors font-display">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-xs text-[#A7A29A] leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
 
-                    <h3 className="text-sm sm:text-base font-bold text-[#F5F2EB] mb-1.5 group-hover:text-[#D8B45A] transition-colors font-display">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-xs text-[#A7A29A] leading-relaxed">
-                      {item.desc}
-                    </p>
+                    {/* Key Tech Tag Pills Eliminating Empty Space */}
+                    <div className="pt-3 mt-3 border-t border-[#1C1C1C] flex flex-wrap gap-1.5">
+                      {item.tags.map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="px-2 py-0.5 rounded-md bg-[#161616] border border-[#262626] text-[10px] sm:text-[11px] font-mono text-[#D8B45A]/90 font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-
-                  {/* Key Tech Tag Pills Eliminating Empty Space */}
-                  <div className="pt-3 mt-3 border-t border-[#1C1C1C] flex flex-wrap gap-1.5">
-                    {item.tags.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="px-2 py-0.5 rounded-md bg-[#161616] border border-[#262626] text-[10px] sm:text-[11px] font-mono text-[#D8B45A]/90 font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                </Reveal>
               );
             })}
           </div>
@@ -170,24 +181,26 @@ export const About: React.FC<AboutProps> = ({ onOpenResumeModal }) => {
         </div>
 
         {/* Editorial Metrics Banner */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
-            <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">8.02</div>
-            <div className="text-xs font-mono text-[#A7A29A] mt-1">B.Tech CGPA</div>
+        <Reveal direction="up" distance={25} duration={0.65} delay={0.2} className="mt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
+              <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">8.02</div>
+              <div className="text-xs font-mono text-[#A7A29A] mt-1">B.Tech CGPA</div>
+            </div>
+            <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
+              <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">200+</div>
+              <div className="text-xs font-mono text-[#A7A29A] mt-1">LeetCode Solved</div>
+            </div>
+            <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
+              <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">500+</div>
+              <div className="text-xs font-mono text-[#A7A29A] mt-1">CodeChef Solved</div>
+            </div>
+            <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
+              <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">2023–2027</div>
+              <div className="text-xs font-mono text-[#A7A29A] mt-1">Academic Period</div>
+            </div>
           </div>
-          <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
-            <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">200+</div>
-            <div className="text-xs font-mono text-[#A7A29A] mt-1">LeetCode Solved</div>
-          </div>
-          <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
-            <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">500+</div>
-            <div className="text-xs font-mono text-[#A7A29A] mt-1">CodeChef Solved</div>
-          </div>
-          <div className="p-5 rounded-2xl bg-[#101010] border border-[#1F1F1F]">
-            <div className="text-2xl sm:text-3xl font-mono font-extrabold text-[#D8B45A]">2023–2027</div>
-            <div className="text-xs font-mono text-[#A7A29A] mt-1">Academic Period</div>
-          </div>
-        </div>
+        </Reveal>
 
       </div>
     </section>

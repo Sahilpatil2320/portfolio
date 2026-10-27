@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PROFILE } from '../data/profile';
 import { SectionHeading } from '../components/SectionHeading';
 import { ContactForm } from '../components/ContactForm';
+import { Reveal } from '../components/Reveal';
 import { Mail, Phone, MapPin, Copy, Check } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, LeetCodeIcon, CodeChefIcon } from '../components/Icons';
 
@@ -42,7 +43,8 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Direct Contact Info (Spans 5 cols) */}
-          <div className="lg:col-span-5 space-y-4 text-left">
+          <div className="lg:col-span-5 text-left">
+            <Reveal direction="up" distance={30} duration={0.65} delay={0.1} className="space-y-4">
             
             {/* Email Card */}
             <div className="p-5 rounded-3xl bg-[#101010] border border-[#222222] hover:border-[#D8B45A]/40 transition-all duration-200 shadow-sm flex items-center justify-between group">
@@ -164,11 +166,14 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
               </div>
             </div>
 
+            </Reveal>
           </div>
 
           {/* Right Column: Contact Form (Spans 7 cols) */}
           <div className="lg:col-span-7">
-            <ContactForm recipientEmail={PROFILE.email} onShowToast={onShowToast} />
+            <Reveal direction="up" distance={30} duration={0.65} delay={0.2}>
+              <ContactForm recipientEmail={PROFILE.email} onShowToast={onShowToast} />
+            </Reveal>
           </div>
 
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PROFILE } from '../data/profile';
+import { Reveal } from '../components/Reveal';
 import { 
   ArrowRight, 
   Download, 
@@ -32,7 +33,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center text-left">
           
           {/* Left Column: Text & Actions (Spans 7 cols on lg) */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <Reveal direction="up" distance={30} duration={0.7} delay={0.1} className="space-y-6">
             
             {/* Top Status & Location Badge */}
             <div className="flex flex-wrap items-center gap-3">
@@ -166,11 +168,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
               </div>
             </div>
 
+            </Reveal>
           </div>
 
           {/* Right Column: Real Profile Photo with Luxury Frame (Spans 5 cols on lg) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm sm:max-w-md">
+            <Reveal direction="up" distance={30} duration={0.7} delay={0.25} className="w-full max-w-sm sm:max-w-md">
+            <div className="relative w-full">
               
               {/* Subtle Ambient Backing Glow */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-[#D8B45A]/20 via-[#1A1A1A] to-transparent rounded-3xl blur-xl opacity-75" />
@@ -219,6 +223,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
               </div>
 
             </div>
+            </Reveal>
           </div>
 
         </div>
