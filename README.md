@@ -1,117 +1,94 @@
-# Sahil Patil — Premium Developer Portfolio
+# Sahil Patil — Developer Portfolio
 
-A bespoke, dark-cinematic developer portfolio engineered for **Sahil Patil** (Java Developer | Software Developer | Computer Science & Engineering Student).
+[![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Built with React 19, TypeScript, Tailwind CSS, Lucide Icons, and modern motion interactions. Inspired by the editorial elegance and dark aesthetic of high-end creative developer portfolios.
-
----
-
-## 🌟 Highlights
-
-- **Bespoke Cinematic Aesthetic**: Deep `#080808` obsidian background, `#101010` secondary card surfaces, `#F5F2EB` warm cream typography, and subtle `#D8B45A` champagne gold accents.
-- **Custom Cursor Interaction**: Champagne gold dot with an easing follower ring and interactive hover scaling (automatically disabled on touch/coarse pointers).
-- **Verified Flagship Projects**:
-  1. **StartupSync — AI-Powered Recommendation System** (Python, Scikit-learn, TF-IDF, React, Node.js, MongoDB)
-  2. **DYPConnect — College Professional Networking Platform** (React.js, Node.js, Express, MongoDB, JWT)
-  3. **E-Grampanchayat Management System** (Android, Java, XML, SQLite)
-  4. **Prompt Builder Website** (Python, Flask, HTML5, CSS3, JS)
-  5. **Real-Time Chat Website** (Go, WebSockets, HTML, CSS, JS)
-  6. **Student Mark Analyzer** (PHP, MySQL, Chart.js, HTML, CSS)
-- **Authentic Credentials & Achievements**:
-  - **LeetCode**: 200+ Problems Solved & 100 Days Coding Badge
-  - **CodeChef**: 500+ Programming Problems Solved
-  - **Open Source**: Merged Pull Request on GitHub
-  - **Academics**: B.Tech in CSE at D. Y. Patil College of Engineering & Technology, Kolhapur (CGPA: 8.02)
-- **Interactive Modals & Controls**:
-  - In-app **Resume Modal** with live PDF preview and download button (`SAHIL_PATIL(1).pdf`)
-  - **Project Deep-Dive Modal** with implementation details and direct GitHub repository links
-  - **Contact Form** with real-time field validation, transparent mailto fallback, and one-click copy with toast notifications.
-  - Sticky glassmorphic navbar with active section detection and mobile drawer.
-  - Floating Back-to-Top button.
+> A modern, responsive developer portfolio showcasing my work as a **Java Developer** and **Computer Science & Engineering Student**. Built with a dark, cinematic aesthetic, smooth scroll-reveal animations, and an editorial layout.
 
 ---
 
-## 🚀 Getting Started
+## 👨‍💻 About Me
 
-### 1. Prerequisites
-- **Node.js** v18+ (tested on v22)
-- **npm** v9+ (or pnpm / yarn)
+I am a Computer Science & Engineering student at **D. Y. Patil College of Engineering and Technology, Kolhapur** (2023–2027) with an **8.02 CGPA**. 
 
-### 2. Run the Development Server
+My core focus includes:
+- **Core Java & Object-Oriented Programming**
+- **Data Structures & Algorithms** (700+ problems solved across LeetCode and CodeChef)
+- **Full-Stack Web Development** (React.js, Node.js, Express, MongoDB, REST APIs)
+- **Android App Development** (Java, SQLite)
+
+---
+
+## 🚀 Featured Projects
+
+| Project | Description | Technologies |
+|---|---|---|
+| **[StartupSync](https://github.com/Sahilpatil2320/StartupSync-AI-Recommendation-System)** | AI-powered recommendation platform connecting startups with investors, mentors, and students using content-based TF-IDF matching. | Python, Scikit-learn, TF-IDF, React.js, Node.js, MongoDB |
+| **[DYPConnect](https://github.com/Sahilpatil2320/DYPConnect)** | College networking platform connecting students, faculty, and alumni with profiles, search, opportunities, and JWT authentication. | React.js, Node.js, Express.js, MongoDB, JWT |
+| **[E-Grampanchayat](https://github.com/Sahilpatil2320)** | Android application for village administration, managing citizen records, complaints, announcements, and local public services. | Android, Java, XML, SQLite |
+| **[Prompt Builder](https://github.com/Sahilpatil2320/Prompt_Builder_Web)** | Step-by-step guided web workflow for crafting structured, precision prompts. | Python, Flask, HTML5, CSS3, JavaScript |
+| **[Real-Time Chat](https://github.com/Sahilpatil2320/GoLang_project)** | Low-latency messaging website powered by WebSockets for instant two-way communication. | Go, WebSockets, HTML, CSS, JavaScript |
+| **[Student Mark Analyzer](https://github.com/Sahilpatil2320/Student-Marks-Analyzer)** | Academic analytics application computing grade metrics and student performance distributions. | PHP, MySQL, Chart.js, HTML, CSS |
+
+---
+
+## 🏆 Key Achievements
+
+- 🧠 **LeetCode**: Solved **200+** algorithmic problems and earned the **100 Days Coding Badge**.
+- ⚡ **CodeChef**: Solved **500+** competitive programming problems.
+- 🌐 **Open Source**: Successfully contributed to open-source software on GitHub with merged pull requests.
+- 🎓 **Academics**: Consistent **8.02 CGPA** in B.Tech Computer Science & Engineering.
+
+---
+
+## 🛠️ Skills & Technologies
+
+- **Languages:** Java, Python, C, C++, Go, C#, JavaScript, SQL
+- **Frontend:** React.js, HTML5, CSS3, Tailwind CSS
+- **Backend:** Node.js, Express.js, Flask, REST APIs
+- **Databases:** MongoDB, MySQL, SQLite
+- **Tools:** Git, GitHub, IntelliJ IDEA, Android Studio, VS Code
+- **Currently Learning:** Spring Boot, Hibernate / JPA, Advanced Java Backend
+
+---
+
+## 💻 Running Locally
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Sahilpatil2320/portfolio.git
+cd portfolio
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start development server
 ```bash
 npm run dev
 ```
-Open `http://localhost:5173` in your browser.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 3. Production Build
+### 4. Build for production
 ```bash
 npm run build
 ```
-Creates optimized static assets in the `dist/` directory ready for deployment.
-
-### 4. Preview the Production Build Locally
-```bash
-npm run preview
-```
 
 ---
 
-## 📁 Project Structure
+## 📬 Connect With Me
 
-```
-Port/
-├── public/
-│   ├── images/
-│   │   └── sahil-profile.png     # Genuine profile photo
-│   ├── projects/                 # Project SVG illustrations and mockups
-│   ├── resume/
-│   │   └── Sahil_Patil.pdf
-│   ├── SAHIL_PATIL(1).pdf        # Active resume download
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   ├── BackToTop.tsx         # Floating scroll to top
-│   │   ├── ContactForm.tsx       # Validated form + mailto fallback
-│   │   ├── CustomCursor.tsx      # Smooth champagne gold cursor
-│   │   ├── Footer.tsx            # Wordmark, links & dynamic year
-│   │   ├── Icons.tsx             # Custom SVGs for GitHub, LinkedIn, LeetCode, CodeChef
-│   │   ├── Navbar.tsx            # Sticky header with SP monogram & mobile drawer
-│   │   ├── ProjectCard.tsx       # Interactive project cards
-│   │   ├── ProjectModal.tsx      # Project deep dive modal
-│   │   ├── ResumeModal.tsx       # Live PDF preview & download modal
-│   │   ├── SectionHeading.tsx    # Editorial section heading
-│   │   ├── SkillGroup.tsx        # Categorized skill cards
-│   │   └── Toast.tsx             # Toast notification system
-│   ├── data/
-│   │   ├── achievements.ts       # LeetCode 200+, CodeChef 500+, Open Source
-│   │   ├── certifications.ts     # Cisco, Udemy, Eduskill
-│   │   ├── education.ts          # DYP CET Kolhapur & Kisanrao More Junior College
-│   │   ├── profile.ts            # Bio, contact, links, photo
-│   │   ├── projects.ts           # 6 projects in strict priority order
-│   │   └── skills.ts             # 6 categories of skills
-│   ├── sections/
-│   │   ├── About.tsx             # Bio, education summary, CGPA 8.02
-│   │   ├── Achievements.tsx      # Problem solving & open source milestones
-│   │   ├── Certifications.tsx    # Technical certifications
-│   │   ├── Contact.tsx           # Contact info, copy actions & form
-│   │   ├── Education.tsx         # Academic timeline
-│   │   ├── Hero.tsx              # Split hero with profile photo & CTAs
-│   │   ├── Projects.tsx          # Flagship trio + additional projects
-│   │   └── Skills.tsx            # Capabilities categorized grid
-│   ├── App.tsx                   # Main layout container
-│   ├── index.css                 # Dark theme, scrollbar & utilities
-│   └── main.tsx                  # Entry point
-├── index.html                    # SEO tags, Syne & JetBrains Mono fonts
-├── package.json
-├── tailwind.config.js            # Custom color palette tokens
-└── tsconfig.json
-```
+- **Email:** [sahilpatil222005@gmail.com](mailto:sahilpatil222005@gmail.com)
+- **LinkedIn:** [linkedin.com/in/sahil-patil2320](https://www.linkedin.com/in/sahil-patil2320/)
+- **GitHub:** [github.com/Sahilpatil2320](https://github.com/Sahilpatil2320)
+- **LeetCode:** [leetcode.com/u/Sahilpatil2320](https://leetcode.com/u/Sahilpatil2320/)
+- **Location:** Kolhapur, Maharashtra, India
 
 ---
 
-## 🌐 Deployment
-
-The build output in `dist/` is completely static and can be deployed directly to:
-- **Netlify**: Drag and drop the `dist/` folder or link to GitHub with build command `npm run build` and publish directory `dist`.
-- **Vercel**: Run `vercel` or link your GitHub repo.
-- **GitHub Pages**: Deploy the `dist` folder to `gh-pages` branch.
+⭐ *If you find this portfolio helpful or inspiring, feel free to give it a star!*
