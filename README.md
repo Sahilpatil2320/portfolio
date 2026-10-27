@@ -1,11 +1,13 @@
 # Sahil Patil — Developer Portfolio
 
+[![Live Demo](https://img.shields.io/badge/Live_Portfolio-sahilpatil--portfolio.vercel.app-D8B45A?style=for-the-badge&logo=vercel&logoColor=black)](https://sahilpatil-portfolio.vercel.app/)
 [![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
+> 🌐 **Live Website:** [https://sahilpatil-portfolio.vercel.app/](https://sahilpatil-portfolio.vercel.app/)
+>
 > A modern, responsive developer portfolio showcasing my work as a **Java Developer** and **Computer Science & Engineering Student**. Built with a dark, cinematic aesthetic, smooth scroll-reveal animations, and an editorial layout.
 
 ---
